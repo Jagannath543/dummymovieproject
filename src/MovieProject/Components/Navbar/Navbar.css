@@ -1,0 +1,172 @@
+/* Base styles for navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 20px;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+  margin-left: 2em;
+  font-size: 29px;
+  font-weight: bold;
+  text-decoration: none;
+  color: orange;
+}
+
+a {
+  text-decoration: none;
+  color: orange;
+}
+
+.navLinks {
+  list-style-type: none;
+  display: flex;
+  gap: 95px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.navLink:hover {
+  color: #ffcc00;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  padding: 5px 15px;
+  border-radius: 4px;
+  border: none;
+  font-size: 16px;
+  width: 400px;
+  margin-left: 20px;
+}
+
+/* Dark mode */
+body.dark-mode .navbar {
+  background-color: #1a1a1a;
+}
+
+body.dark-mode .navLink {
+  color: white;
+}
+
+body.dark-mode .navLink:hover {
+  color: #ffcc00;
+}
+
+body.dark-mode .searchInput {
+  background-color: #555;
+  color: white;
+  border: 1px solid #888;
+}
+
+/* Light mode */
+body.light-mode .navbar {
+  background-color: #f1f1f1;
+}
+
+body.light-mode .navLink {
+  color: black;
+}
+
+body.light-mode .navLink:hover {
+  color: #f39c12;
+}
+
+body.light-mode .searchInput {
+  background-color: #fff;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+/* Responsive Navbar for Tablets */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px;
+  }
+
+  .navLinks {
+    display: none; /* Hide links on smaller screens */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .navLinks.active {
+    display: flex; /* Show links when menu is active */
+  }
+
+  .searchInput {
+    width: 250px; /* Adjust search input width */
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+}
+
+/* Mobile-first Design for Smaller Screens */
+@media (max-width: 500px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .searchInput {
+    width: 180px; /* Adjust search input width */
+  }
+
+  .navLink {
+    font-size: 18px;
+  }
+
+  .navLinks {
+    gap: 50px;
+  }
+}
+
+/* Flagship Mobile Devices (350px and below) */
+@media (max-width: 350px) {
+  .navbar {
+    padding: 8px;
+  }
+
+  .searchInput {
+    width: 150px; /* Adjust search input width */
+  }
+
+  .navLink {
+    font-size: 16px;
+  }
+
+  .navLinks {
+    gap: 30px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}

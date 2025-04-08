@@ -1,0 +1,236 @@
+/* Base styles for all screens */
+.actor-details-container {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #2c3e50;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    max-width: 1200px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #ecf0f1;
+}
+
+.actor-details-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Actor Image Styling */
+.actor-img-container {
+    position: relative;
+    width: 250px;
+    height: 375px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-right: 25px; /* Space between image and details */
+    transition: transform 0.3s ease;
+}
+
+.actor-img-container:hover {
+    transform: scale(1.05);
+}
+
+.actor-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 2px solid #34495e;
+}
+
+.actor-profile-img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* Actor Info */
+.actor-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #ecf0f1;
+}
+
+.actor-info strong {
+    color: #f39c12;
+}
+
+.actor-info h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f39c12;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Movies Section */
+.actor-movies {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.actor-movies h2 {
+    font-size: 1.8rem;
+    color: #f39c12;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Movies List */
+.actor-movies ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Movie Item Cards */
+.movie-item {
+    background-color: #34495e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+    color: #ecf0f1;
+}
+
+.movie-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.movie-item h3 {
+    font-size: 1.2rem;
+    color: #f39c12;
+    margin-bottom: 10px;
+}
+
+.movie-item p {
+    font-size: 1rem;
+    color: #95a5a6;
+    margin-bottom: 10px;
+}
+
+/* Movie Item Image */
+.movie-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+
+/* For tablets (600px and below) */
+@media (max-width: 768px) {
+    .actor-details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .actor-img-container {
+        width: 200px;
+        height: 300px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .actor-info h1 {
+        font-size: 2rem;
+    }
+
+    .movie-item {
+        width: 200px;
+    }
+
+    .actor-movies ul {
+        gap: 15px;
+    }
+}
+
+/* For mobile devices (500px and below) */
+@media (max-width: 500px) {
+    .actor-details-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .actor-img-container {
+        width: 180px;
+        height: 270px;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .actor-info h1 {
+        font-size: 1.8rem;
+    }
+
+    .movie-item {
+        width: 150px;
+        padding: 15px;
+    }
+
+    .actor-movies ul {
+        gap: 10px;
+    }
+
+    .actor-info p {
+        font-size: 1rem;
+    }
+
+    .movie-item img {
+        margin-bottom: 8px;
+    }
+}
+
+/* For flagship mobile devices (350px and below) */
+@media (max-width: 350px) {
+    .actor-details-container {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .actor-img-container {
+        width: 160px;
+        height: 240px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .actor-info h1 {
+        font-size: 1.6rem;
+    }
+
+    .movie-item {
+        width: 140px;
+        padding: 12px;
+    }
+
+    .actor-info p {
+        font-size: 0.9rem;
+    }
+
+    .movie-item h3 {
+        font-size: 1rem;
+    }
+
+    .movie-item p {
+        font-size: 0.9rem;
+    }
+
+    .actor-info strong {
+        font-size: 1rem;
+    }
+}

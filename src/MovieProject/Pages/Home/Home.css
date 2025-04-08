@@ -1,0 +1,26 @@
+/* Home.css */
+.homeContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .movie-cards {
+    display: grid;  /* Use CSS Grid to create a flexible grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Create flexible columns */
+    gap: 20px;  /* Space between cards */
+    width: 100%;
+    max-width: 1200px;  /* Limit the width of the grid */
+  }
+  
+  .movie-cards .card {
+    margin: 0;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+  .movie-cards .card:hover {
+    transform: scale(1.05);
+  }
+  
